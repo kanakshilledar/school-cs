@@ -264,3 +264,50 @@ cube(n)
 x = input('$ ')
 y = input('$ ')
 print(characters(x, y))
+
+# 7. Menu Based Phone Dictionary
+#     * Create Phone Dictionary
+#     * Edit Phone Dictionary
+#         * Phone Number
+#         * Display
+#     * Display all Data
+
+numbers = {}
+while True:
+    print('''
+    * Create Phone Dictionary (c)
+    * Edit Phone Dictionary (e)
+        ** Phone Number (p)
+        ** Display (d)
+    * Display all data (i)
+    * Exit (x)
+    ''')
+
+    choice = input('Enter your choice: ')
+
+    # creating directory
+    if (choice == 'c'):
+        # name and number input
+        name = input('$ ')
+        phone = input('$ ')
+        numbers[name] = phone
+    # editing phone dict
+    if (choice == 'e'):        
+        task = input('Enter task: ')
+        # edit number
+        if (task == 'p'):
+            name = input('$ ')
+            changeNumber = input('$ ')
+            numbers[name] = changeNumber
+        # edit display
+        if (task == 'd'):
+            name = input('$ ')
+            changeName = input('$ ')
+            numbers[changeName] = numbers[name]
+            del numbers[name]
+    # display all data
+    if (choice == 'i'):
+        for x in numbers.keys():
+            print('Name: ', x, '\tNumber: ', numbers[x])
+    if (choice == 'x'):
+        break
