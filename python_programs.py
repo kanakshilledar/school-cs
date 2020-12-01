@@ -244,6 +244,7 @@ while True:
         print('Try again!')
 
 
+
 # 6. Program with the following function characteristics
 #     * Cube of number with default value 2 (no return).
 #     * Checks whether the two input characters are equal (return T/F)
@@ -264,6 +265,8 @@ cube(n)
 x = input('$ ')
 y = input('$ ')
 print(characters(x, y))
+
+
 
 # 7. Menu Based Phone Dictionary
 #     * Create Phone Dictionary
