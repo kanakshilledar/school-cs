@@ -314,3 +314,78 @@ while True:
             print('Name: ', x, '\tNumber: ', numbers[x])
     if (choice == 'x'):
         break
+
+
+
+# 8. Dictionary with keys as month names and values as number of days
+#     * Ask the user to enter month name and print no of days
+#     * Print out all of the keys in alphabetical order
+#     * Print all the months in alphabetical order
+
+year = {'January' : 31, 'February' : 28, 'March' : 31, 'April' : 30, 
+    'May' : 31, 'June' : 30, 'July' : 31, 'August' : 31, 'September' : 30,
+    'October' : 31, 'November' : '30', 'December' : 31}
+
+
+# input month name
+month = input('Enter month name: ')
+print('>>> ', year[month])
+
+# print all keys
+months = year.keys()
+# converting dict_keys() to list()
+months = list(months)
+# sorting months
+months.sort()
+print(months)
+
+# printing months with 31 days
+print('Months having 31 days!')
+for month in year:
+    if (year[month] == 31):
+        print(month, end = ' ')
+
+print()
+
+
+
+# 9. Menu based program for 
+#     * Sorting elements with bubble sort
+#     * Factorial of a number in function
+
+def factorial(n):
+    if (n == 1):
+        return n
+    else:
+        return n * factorial(n - 1)
+
+def bSort(l):
+    length = len(l)
+
+    for i in range(length - 1):
+        for j in range(0, length - i - 1):
+            if (l[j] > l[j + 1]):
+                l[j], l[j + 1] = l[j + 1], l[j]
+
+    return l
+
+
+# driver Program 
+while True:
+    print('''
+    \tFactorial Of Number (!)
+    \tBubble Sort Implementation (~)
+    \tExit (.)''')
+
+    choice = input('Enter your choice: ')
+
+    if (choice == "!"):
+        n = int(input('Enter any number: '))
+        print(factorial(n))
+    if (choice == "~"):
+        l = eval(input('Enter list of elements: '))
+        print(bSort(l))
+    if (choice == "."):
+        break
+    if (choice != '.' and choice != '!' and choice != '~'):
+        print('Try again!')
