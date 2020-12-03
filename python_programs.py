@@ -565,3 +565,44 @@ while True:
     
     if (choice != '?' and choice != '!' and choice != '~'):
         print('Try again!')
+
+
+
+# 13. Menu Based
+#     * Input elements in 2d array
+#     * Display main diagonal of the array
+
+# driver Program
+matrix = [] 
+# initializing matrix using list comprehension
+# 3x3 matrix is being made
+matrix = [x[:] for x in[[0] * 0] * 0]
+while True:
+    print('''
+    \tInput in 2d Array (!)
+    \tPrint main diagonal (~)
+    \tExit (.)''')
+
+    choice = input('Enter your choice: ')
+    # input elements in 2d array
+    if (choice == "!"):
+        for i in range(0, 3):
+            rowList = []
+            for j in range(0, 3):
+                rowList.append(int(input('$ ')))
+            matrix.append(rowList)
+        print(matrix)
+    # print principle diagonal
+    if (choice == "~"):
+        for i in range(0, 3):
+            for j in range(0, 3):
+                if (i == j):
+                    print(matrix[i][j], end = ' ')
+        print()
+    # exit
+    if (choice == "."):
+        break
+    # try again case
+    if (choice != '.' and choice != '!' and choice != '~'):
+        print('Try again!')
+    
