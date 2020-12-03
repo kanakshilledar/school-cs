@@ -500,3 +500,68 @@ while True:
     
     if (choice != '?' and choice != '!' and choice != '~'):
         print('Try again!')
+
+
+
+# 12. Menu Based 
+#     * Swap elements at the even location with elements at odd
+#     * search for a given element in the list
+#     * find the larges and smallest number in list.
+
+# swapping odd elements with even
+def swapper(l):
+    op = l[:]
+    evenIndex, oddIndex = 0, 1
+    for value in l:
+        if value % 2 == 0:
+            op[evenIndex] = value
+            evenIndex += 2
+        else:
+            op[oddIndex] = value
+            oddIndex += 2
+
+    return op
+
+# recursive binary search approach
+def bSearch(l, low, high, x):
+    if (high >= low):
+        mid = (low + high) // 2
+        if l[mid] == x:
+            return mid
+        elif l[mid] > x:
+            return bSearch(l, low, mid - 1, x)
+        else:
+            return bSearch(l, mid + 1, high, x)
+    else:
+        # returns -1 is no matching element is found
+        return -1
+
+
+# driver Program 
+# enter elements into list
+l = eval(input('$ '))
+while True:
+    print('''
+    \tSwap Elements (!)
+    \tSearch Element (~)
+    \tLargest and Smallest Number (?)
+    \tExit (.)''')
+
+    choice = input('Enter your choice: ')
+    
+    # swap element
+    if (choice == "!"):
+        print('>>> ', swapper(l))
+    # search element
+    if (choice == "~"):
+        x = int(input('$ '))
+        print('>>> ', bSearch(l, 0, len(l) - 1, x))
+    # smallest and largest element
+    if (choice == "?"):
+        print('>>> ', max(l), '\t', min(l))
+    # exit 
+    if (choice == "."):
+        break
+    
+    if (choice != '?' and choice != '!' and choice != '~'):
+        print('Try again!')
