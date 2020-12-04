@@ -644,3 +644,59 @@ while True:
         break
     if (choice != '.' and choice != '!' and choice != '~'):
         print('Try again!')
+
+
+
+# 15. Menu Based Program to
+#     * Checking palindrome
+#     * interchange first half with second
+#     * count number of even elements in list
+
+def swapper(l):
+    mid = len(l) // 2
+    for i in range(mid):
+        l[len(l) - 1 - i], l[i] = l[i], l[len(l) - 1 - i]
+    return l
+
+def counter(l):
+    count = 0
+    for i in l:
+        if (i % 2 == 0):
+            count += 1
+
+    return count
+
+l = []
+# driver Program 
+# enter elements into list
+l = eval(input('$ '))
+while True:
+    print('''
+    \tcheck palindrome (!)
+    \tinterchange halves (~)
+    \tcount number of even elements (?)
+    \texit (.)''')
+
+    choice = input('Enter your choice: ')
+    
+    # check palindrome
+    if (choice == "!"):
+        s = input('$ ')
+        if (s == s[::-1]):
+            print('>>> True')
+        else:
+            print('>>> False')
+    # swap halves
+    if (choice == "~"):
+        l = eval(input('$ '))
+        swapper(l)
+        print('>>> ', l)
+    # number of even elements in l
+    if (choice == "?"):
+        print('>>> ', counter(l))
+    # exit 
+    if (choice == "."):
+        break
+    
+    if (choice != '?' and choice != '!' and choice != '~'):
+        print('Try again!')
