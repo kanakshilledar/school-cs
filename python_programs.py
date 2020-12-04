@@ -605,4 +605,42 @@ while True:
     # try again case
     if (choice != '.' and choice != '!' and choice != '~'):
         print('Try again!')
-    
+
+
+
+# 14. Menu Based
+    # * Input any List, print its length
+    # * Arrange list in ascending order using insertion sort
+
+# insertion sort algorithm
+def iSort(l):
+    for i in range(1, len(l)):
+        key = l[i]
+
+        j = i - 1
+        while (j >= 0 and key < l[j]):
+            l[j + 1] = l[j]
+            j -= 1
+        l[j + 1] = key
+
+# driver Program 
+while True:
+    print('''
+    \tInput and find length (!)
+    \tInsertion Sort Implementation (~)
+    \tExit (.)''')
+
+    choice = input('Enter your choice: ')
+
+    if (choice == "!"):
+        # input and find length
+        l = eval(input('$ '))
+        print('>>> ', len(l))
+    if (choice == "~"):
+        iSort(l)
+        # print sorted string
+        print('>>> ', l)
+    if (choice == "."):
+        break
+    if (choice != '.' and choice != '!' and choice != '~'):
+        print('Try again!')
