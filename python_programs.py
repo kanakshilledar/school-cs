@@ -734,6 +734,53 @@ while True:
         # print sorted string
         print('>>> ', sq)
     if (choice == "."):
+       sq = tuple(sq)
+        break
+    if (choice != '.' and choice != '!' and choice != '~'):
+        print('Try again!')
+
+
+
+# 17. Menu Based
+#     * Binary Search Implementation
+#     * Tuple to store integers from 1 to 25
+
+# recursive binary search approach
+def bSearch(l, low, high, x):
+    if (high >= low):
+        mid = (low + high) // 2
+        if l[mid] == x:
+            return mid
+        elif l[mid] > x:
+            return bSearch(l, low, mid - 1, x)
+        else:
+            return bSearch(l, mid + 1, high, x)
+    else:
+        # returns -1 is no matching element is found
+        return -1
+
+# driver Program 
+while True:
+    print('''
+    \tlinear search implementation (!)
+    \tstore squares from 1 to 25 in a tuple (~)
+    \tExit (.)''')
+
+    choice = input('Enter your choice: ')
+
+    if (choice == "!"):
+        # input list
+        l = eval(input('$ '))
+        # input search element
+        x = int(input('$ '))
+        print('>>> ', bSearch(l, 0, len(l) - 1, x))
+    if (choice == "~"):
+        # inserting squares using list comprehension
+        sq = [i ** 2 for i in range(1, 26)]
+        sq = tuple(sq)
+        # print sorted string
+        print('>>> ', sq)
+    if (choice == "."):
         break
     if (choice != '.' and choice != '!' and choice != '~'):
         print('Try again!')
