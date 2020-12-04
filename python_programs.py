@@ -700,3 +700,40 @@ while True:
     
     if (choice != '?' and choice != '!' and choice != '~'):
         print('Try again!')
+
+
+
+# 16. Menu Based
+#     * Linear Search Implementation
+#     * Tuple to store integers from 1 to 25
+
+def lSearch(l, x):
+    for i in l:
+        if (i == x):
+            return True
+    return False
+
+# driver Program 
+while True:
+    print('''
+    \tlinear search implementation (!)
+    \tstore squares from 1 to 25 in a tuple (~)
+    \tExit (.)''')
+
+    choice = input('Enter your choice: ')
+
+    if (choice == "!"):
+        # input list
+        l = eval(input('$ '))
+        # input search element
+        x = int(input('$ '))
+        print('>>> ', lSearch(l, x))
+    if (choice == "~"):
+        # inserting squares using list comprehension
+        sq = [i ** 2 for i in range(1, 26)]
+        # print sorted string
+        print('>>> ', sq)
+    if (choice == "."):
+        break
+    if (choice != '.' and choice != '!' and choice != '~'):
+        print('Try again!')
