@@ -887,3 +887,39 @@ while True:
         print('Try again!')
 
 
+
+# 21. Menu based
+#     * Create text file named notes.txt
+#     * Copy all three letter words to words.txt 
+
+# driver Program 
+while True:
+    print('''
+    \tcreate text file named notes.txt (!)
+    \tcopy all 3 letter words to words.txt (~)
+    \tExit (.)''')
+
+    choice = input('Enter your choice: ')
+    # create file named notes.txt
+    if (choice == "!"):
+        file = open('notes.txt', 'w')   
+        file.close()     
+    if (choice == "~"):
+        file = open('words.txt', 'r')
+        lines = file.read()
+        words = lines.split()
+        wordList = []
+        for word in words:
+            if (len(word) == 3):
+                wordList.append(word)
+        file.close()
+        file = open('words.txt', 'w')
+        file.writelines(wordList)
+        file.close()
+        
+    if (choice == "."):
+        break
+    if (choice != '.' and choice != '!' and choice != '~'):
+        print('Try again!')
+
+
