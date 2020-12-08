@@ -962,7 +962,7 @@ while True:
 
 
 
-# 22. Store details of 5 students in a binary file
+# 23. Store details of 5 students in a binary file
 
 # importing library
 import pickle
@@ -978,4 +978,64 @@ for i in range(5):
 file = open('student.dat', 'wb')
 pickle.dump(l, file)
 file.close()
+
+
+
+# 24. Menu based program
+#     * create binary file
+#     * display binary file
+#     * search binary file
+#     * update record in binary file
+
+import pickle
+
+while True:
+    print('''
+    \tcreate (!)
+    \tdisplay (~)
+    \tsearch (\)
+    \tupdate (/)
+    \tExit (.)''')
+
+    choice = input('Enter your choice: ')
+    # create binary file
+    if (choice == "!"):
+        # add data into the binary file
+        text = input('$ ')
+        f = open('student.dat', 'wb')
+        pickle.dump(text, f)
+        f.close()
+    # display data
+    if (choice == "~"):
+        f = open('binary.bin', 'rb')
+        text = pickle.load(f)
+        print('>>> ', text)
+        f.close()
+    # search in file
+    if (choice == '\\'):
+        # search the character
+        find = input('$ ')
+        f = open('student.dat', 'rb')
+        text = pickle.load(f)
+        f.close()
+        flag = False
+        for x in text:
+            if (x == find):
+                flag = True
+                break
+        print('>>> ', flag)
+    
+    # update
+    if (choice == '/'):
+        f = open('student.dat', 'rb+')
+        # add text for appending to the file
+        text = input('$ ')
+        pickle.dump(text, f)
+        f.close()
+    # exit
+    if (choice == "."):
+        break
+    # try again case
+    if (choice != '/' and choice != '!' and choice != '~' and choice != '\\'):
+        print('Try again!')
 
