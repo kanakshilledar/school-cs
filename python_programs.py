@@ -923,3 +923,59 @@ while True:
         print('Try again!')
 
 
+
+# 22. Menu Based 
+#     * create text file named file1.txt
+#     * count number of characters and spaces
+
+# driver Program 
+while True:
+    print('''
+    \tcreate text file named file1.txt (!)
+    \tcount number of spaces and characters (~)
+    \tExit (.)''')
+
+    choice = input('Enter your choice: ')
+    # create file named notes.txt
+    if (choice == "!"):
+        file = open('file1.txt', 'w')   
+        file.close()     
+    if (choice == "~"):
+        file = open('file1.txt', 'r')
+        lines = file.read()
+        countSpace = 0
+        countCharacter = 0
+        for char in lines:
+            if (char == ' '):
+                countSpace += 1
+            else:
+                countCharacter += 1
+        # count of spaces
+        print('>>> ', countSpace)
+        # count of characters
+        print('>>> ', countCharacter)
+        file.close()
+    if (choice == '.'):
+        break
+    if (choice != '!' and choice != '~'):
+        print('Try Again!')
+
+
+
+# 22. Store details of 5 students in a binary file
+
+# importing library
+import pickle
+l = []
+for i in range(5):
+    # input roll number
+    roll = input('$ ')
+    # input name
+    sname = input('$ ')
+    student = {'roll': roll, 'name':sname}
+    l.append(student)
+
+file = open('student.dat', 'wb')
+pickle.dump(l, file)
+file.close()
+
