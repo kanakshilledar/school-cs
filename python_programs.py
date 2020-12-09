@@ -1039,3 +1039,25 @@ while True:
     if (choice != '/' and choice != '!' and choice != '~' and choice != '\\'):
         print('Try again!')
 
+
+
+# 25. Increase salary by Rs 20000 of employee having empno 1255 in emp1.dat
+
+import pickle
+
+f = open('emp1.dat', 'rb+')
+l = pickle.load()
+found = 0
+lst = []
+# update salary of 1255
+emp = 1255
+for x in l:
+    if emp in x[emp]:
+        found = 1
+        x[emp] += 20000
+    lst.append(x)
+if (found == 1):
+    f.seek(0)
+    pickle.dump(lst, f)
+
+f.close()
