@@ -1155,7 +1155,7 @@ while True:
 
 
 
-# 28. Menu based program for queue operations
+# 29. Menu based program for queue operations
 #     * Insert
 #     * Display
 #     * Delete
@@ -1196,7 +1196,7 @@ while True:
 
 
 
-# 28. Menu based program for list comprehension
+# 30. Menu based program for list comprehension
 #     * list_1 to store numbers 1 - 10
 #     * list_2 to store even number from list_1
 
@@ -1218,3 +1218,25 @@ while True:
         break
     if (choice != '>' and choice != '<' and choice != '!'):
         print('Try Again!')
+
+
+
+# 31. Using List comprehension print
+#     * S = 1 + 3 + 5 + 7 + ... + n
+#     * S = 2 + 4 + 6 + 8 + ... + n
+
+# input n
+n = int(input('$ '))
+l = [x for x in range (1, n + 1)]
+evenSum, oddSum = 0;
+for num in l:
+    if (l % 2 = 0):
+        evenSum += num
+    else:
+        oddSum += num
+
+# even sum
+print('>>> ', evenSum)
+# odd sum
+print('>>> ', oddSum)
+
