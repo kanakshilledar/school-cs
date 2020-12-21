@@ -1153,3 +1153,43 @@ while True:
     if (choice != '>' and choice != '<' and choice != '!' and choice != '0'):
         print('Try Again!')
 
+
+
+# 28. Menu based program for queue operations
+#     * Insert
+#     * Display
+#     * Delete
+
+queue = []
+
+while True:
+    print(''' 
+    Menu Based
+    * Insert  (>)
+    * Display (<)
+    * Delete   (!)
+    * Break (:)
+    
+    Choose one option.''')
+    choice = input('$ ')
+
+    # insert operation
+    if (choice == '>'):
+        # input in queue
+        d = eval(input('$ '))
+        stack.append(d)
+    # display operation
+    if (choice == '<'):
+       print('>>> ', queue) 
+
+    # delete operation
+    if (choice == '!'):
+       stack.pop(0)
+
+    # exit
+    if (choice == ':'):
+        break
+
+    # try again
+    if (choice != '>' and choice != '<' and choice != '!'):
+        print('Try Again!')
