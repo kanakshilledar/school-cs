@@ -1101,3 +1101,55 @@ for row in rows:
     for col in row:
         print('%10s'%col),
     print('\n')
+
+
+
+# 27 is same as 26 one
+
+
+
+# 28. Menu based program for stack operations
+#     * Push
+#     * Display
+#     * Pop
+#     * Peek
+
+stack = []
+
+while True:
+    print(''' 
+    Menu Based
+    * Push  (>)
+    * Display (<)
+    * Pop   (!)
+    * Peek (0)
+    * Break (:)
+    
+    Choose one option.''')
+    choice = input('$ ')
+
+    # push operation
+    if (choice == '>'):
+        # input in stack
+        d = eval(input('$ '))
+        stack.append(d)
+    # display operation
+    if (choice == '<'):
+       print('>>> ', stack) 
+
+    # pop  operation
+    if (choice == '!'):
+       stack.pop()
+
+    # peek operation
+    if (choice == '0'):
+        print('>>> ', stack[-1])
+
+    # exit
+    if (choice == ':'):
+        break
+
+    # try again
+    if (choice != '>' and choice != '<' and choice != '!' and choice != '0'):
+        print('Try Again!')
+
