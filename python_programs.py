@@ -1255,3 +1255,19 @@ l = [   [3, 5, 4],
         [7, 6, 9],
         [2, 1, 8]]
 matrices(l)
+
+
+
+# 33 fn to print sum of alternate elements in list
+
+def alternateSum(l):
+    sum = l[0][1] + l[1][0] + l[1][2] + l[2][1]
+    print('>>> ', sum)
+# driver program
+l = [   [3, 5, 4],
+        [7, 6, 9],
+        [2, 1, 8]]
+
+alternateSum(l)
+
+# only python programs is over
