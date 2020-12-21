@@ -1240,3 +1240,18 @@ print('>>> ', evenSum)
 # odd sum
 print('>>> ', oddSum)
 
+
+
+# 32 fn to print matrix and find sum of its main diagonals
+
+def matrices(l):
+    # print matrix
+    print('>>> ', l)
+    diagonalSum = l[0][0] + l[1][1] + l[2][2]
+    # print main diagonal sum
+    print('>>> ', sum)
+# driver program
+l = [   [3, 5, 4],
+        [7, 6, 9],
+        [2, 1, 8]]
+matrices(l)
