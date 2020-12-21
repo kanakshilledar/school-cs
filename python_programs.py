@@ -1061,3 +1061,43 @@ if (found == 1):
     pickle.dump(lst, f)
 
 f.close()
+
+
+
+# 26. Program to create binary file, "Employee.csv"
+# and store details of n employee and display it.
+
+import csv
+
+file = 'employee.csv'
+
+# initializing rows and fields
+fields = ['EName', 'Salary', 'Department']
+
+# input number of details
+n = int(input('$ '))
+with open(file, 'w') as csvFile:
+    csvWriter = csv.writer(csvFile)
+    csvWriter.writerow(fields)
+    # input details of employee
+    for i in range(n):
+        details = eval(input('$ '))
+        csvWriter.writerow(details)
+
+# displaying the file
+ 
+# initializing the field and row variables 
+fileds = []
+rows = []
+# opening the file
+with open(file, 'r') as csvFile:
+    csvReader = csv.reader(csvFile)
+    fields = next(csvReader)
+    for row in csvReader:
+        rows.append(row)
+# displaying its contents
+print('>>>')
+for row in rows:
+    for col in row:
+        print('%10s'%col),
+    print('\n')
