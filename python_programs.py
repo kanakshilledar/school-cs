@@ -1193,3 +1193,28 @@ while True:
     # try again
     if (choice != '>' and choice != '<' and choice != '!'):
         print('Try Again!')
+
+
+
+# 28. Menu based program for list comprehension
+#     * list_1 to store numbers 1 - 10
+#     * list_2 to store even number from list_1
+
+while True:
+    print(''' 
+    Menu Based
+    * list_1 to store number 1 - 10  (>)
+    * list_2 to store even numbers from list_1 (<)
+    * Break (:)
+    
+    Choose one option.''')
+    choice = input('$ ')
+
+    if (choice == '>'):
+        list_1 = [x for x in range(1, 11)]
+    if (choice == '<'):
+        list_2 = [x for x in list_1 if x % 2 == 0]
+    if (choice == ':'):
+        break
+    if (choice != '>' and choice != '<' and choice != '!'):
+        print('Try Again!')
