@@ -4,7 +4,10 @@ These are all simple programs the whole problems are divided into some categorie
 - Python Programs
 - Python with mySQL programs
 <br>
-
+[x] Only Python Programs
+[] Python + SQL Programs
+[] SQL Queries
+<br>
 Whenever you see `$ ` this means that you need to input something there. Check the code for what is required to enter.
 
 You can feel free to edit these programs. _I have commented them where ever required_
