@@ -4,6 +4,7 @@ These are all simple programs the whole problems are divided into some categorie
 - Python Programs
 - Python with mySQL programs
 <br>
+Problems Done
 - [x] Only Python Programs<br>
 - [ ] Python + SQL Programs<br>
 - [ ] SQL Queries
