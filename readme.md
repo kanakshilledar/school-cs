@@ -3,7 +3,7 @@
 These are all simple programs the whole problems are divided into some categories like:
 - Python Programs
 - Python with mySQL programs
-<br>
+
 Problems Done:
 - [x] Only Python Programs
 - [ ] Python + SQL Programs
