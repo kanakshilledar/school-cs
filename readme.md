@@ -5,9 +5,10 @@ These are all simple programs the whole problems are divided into some categorie
 - Python with mySQL programs
 <br>
 Problems Done:
-- [x] Only Python Programs<br>
-- [ ] Python + SQL Programs<br>
+- [x] Only Python Programs
+- [ ] Python + SQL Programs
 - [ ] SQL Queries
+
 <br>
 Whenever you see `$ ` this means that you need to input something there. Check the code for what is required to enter.
 
