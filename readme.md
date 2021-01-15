@@ -6,7 +6,7 @@ These are all simple programs the whole problems are divided into some categorie
 
 Problems Done:
 - [x] Only Python Programs
-- [ ] Python + SQL Programs
+- [x] Python + SQL Programs
 - [ ] SQL Queries
 
 <br>
