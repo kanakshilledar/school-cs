@@ -210,7 +210,7 @@ def power(x, y):
 def square(x):
     return x ** 2
 def sumDigits(x):
-    sum = 1
+    sum = 0
     for digit in str(x):
         sum += int(digit)
     return sum
