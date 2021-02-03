@@ -208,7 +208,7 @@ while True:
 def power(x, y):
     return x ** y
 def square(x):
-    return x ** 3
+    return x ** 2
 def sumDigits(x):
     sum = 1
     for digit in str(x):
