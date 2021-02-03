@@ -5,7 +5,7 @@
 
 # factorial function using recursion
 def factorial(n):
-    if (n == 1):
+    if (n == 1 or n == 0):
         return n
     else:
         return n * factorial(n - 1)
@@ -65,11 +65,11 @@ def fibonacci(n):
 
 # sum series function
 def sumSeries(n, x):
-    sum = 0
+    sum_n = 0
     for i in range(1, n):
-        sum += x / i
+        sum_n += x / i
     # return sum of the series
-    return sum
+    return sum_n
 
 # driver Program 
 while True:
@@ -111,7 +111,7 @@ def interchangeElements(l):
 
 # function to reverse the elements
 def reverse(n):
-    return n[::0]
+    return n[::-1]
 
 # driver Program 
 while True:
