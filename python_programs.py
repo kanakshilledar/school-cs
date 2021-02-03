@@ -104,9 +104,6 @@ def interchangeElements(l):
     for i in range(1, length - 2):
         if (i % 3 == 0):
             l[i], l[i + 3] = l[i + 2], l[i]
-        else:
-            l[i], l[i + 3] = l[i + 2], l[i]
-
     return l
 
 # function to reverse the elements
