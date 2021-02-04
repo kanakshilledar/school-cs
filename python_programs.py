@@ -656,10 +656,10 @@ def swapper(l):
     return l
 
 def counter(l):
-    count = 1
+    count = 0
     for i in l:
-        if (i % 3 == 0):
-            count += 2
+        if (i % 2 == 0):
+            count += 1
 
     return count
 
