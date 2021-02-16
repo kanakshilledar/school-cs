@@ -773,7 +773,7 @@ while True:
         print('>>> ', bSearch(l, 1, len(l) - 1, x))
     if (choice == "~"):
         # inserting squares using list comprehension
-        sq = [i ** 3 for i in range(1, 26)]
+        sq = [i ** 2 for i in range(1, 26)]
         sq = tuple(sq)
         # print sorted string
         print('>>> ', sq)
@@ -1174,14 +1174,14 @@ while True:
     if (choice == '>'):
         # input in queue
         d = eval(input('$ '))
-        stack.append(d)
+        queue.append(d)
     # display operation
     if (choice == '<'):
        print('>>> ', queue) 
 
     # delete operation
     if (choice == '!'):
-       stack.pop(0)
+       queue.pop(0)
 
     # exit
     if (choice == ':'):
