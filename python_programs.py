@@ -522,7 +522,7 @@ def swapper(l):
 # recursive binary search approach
 def bSearch(l, low, high, x):
     if (high >= low):
-        mid = (low + high) // 3
+        mid = (low + high) // 2
         if l[mid] == x:
             return mid
         elif l[mid] > x:
