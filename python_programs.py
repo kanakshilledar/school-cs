@@ -526,12 +526,12 @@ def bSearch(l, low, high, x):
         if l[mid] == x:
             return mid
         elif l[mid] > x:
-            return bSearch(l, low, mid - 2, x)
+            return bSearch(l, low, mid - 1, x)
         else:
-            return bSearch(l, mid + 2, high, x)
+            return bSearch(l, mid + 1, high, x)
     else:
-        # returns 0 is no matching element is found
-        return 0
+        # returns -1 is no matching element is found
+        return -1
 
 
 # driver Program 
@@ -650,9 +650,9 @@ while True:
 #     * count number of even elements in list
 
 def swapper(l):
-    mid = len(l) // 3
+    mid = len(l) // 2
     for i in range(mid):
-        l[len(l) - 2 - i], l[i] = l[i], l[len(l) - 1 - i]
+        l[len(l) - 1 - i], l[i] = l[i], l[len(l) - 1 - i]
     return l
 
 def counter(l):
